@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="filters">
+    <input
+      type="text"
+      id="groupTitleFilter"
+      placeholder="Filter by Group Title"
+      [(ngModel)]="groupTitleFilter"
+    />
+    <input
+      type="text"
+      id="descriptionFilter"
+      placeholder="Filter by Description"
+      [(ngModel)]="descriptionFilter"
+    />
+    <button (click)="applyFilters()">Search</button>
+
+  </div>
+  <div class="jsonContainer">
+    <div *ngFor="let record of filteredRecords" class="record">
+      <img [src]="record.stream_logo" alt="Stream Logo" />
+      <h2>{{ record.stream_name }}</h2>
+      <p>Group Title: {{ record.stream_group_title }}</p>
+      <p>Description: {{ record.stream_description }}</p>
+      <p>Open in VLC:</p>
+      <code id="vlcCommand{{ record.id }}">
+        /Applications/VLC.app/Contents/MacOS/VLC "{{ record.stream_url }}"
+      </code>
+      <button ngxClipboard [cbContent]="openWithVLC(record.stream_url)">
+        Copy Command
+      </button>
+    </div>
+  </div>
+</div>

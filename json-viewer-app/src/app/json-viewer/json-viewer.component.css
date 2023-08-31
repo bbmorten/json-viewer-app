@@ -1,0 +1,19 @@
+/* Add your styling here */
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.filters {
+  margin-bottom: 10px;
+}
+
+.record {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.record img {
+  max-width: 100px;
+}

@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  frontend:
+    build: ./json-viewer-app/
+    ports:
+      - 4200:80
+  backend:
+    build: ./download-app/
+    ports:
+      - 4201:${SRV_PORT}
+
