@@ -27,6 +27,8 @@ SRV_PORT="4201"
 export SRV_PORT=4201
 ```
 
-- Allow download-app to get the data and open your browser and connect to http://localhost:4200. You should see a screen like the one below
+
+
+- Allow sometime (20-50 sn) so that download-app to get the data and open your browser and connect to http://localhost:4200. You should see a screen like the one below
 
 ![Sample Screen](screenshot.png)
