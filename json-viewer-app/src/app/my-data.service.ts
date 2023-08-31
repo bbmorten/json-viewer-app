@@ -12,6 +12,6 @@ export class MyDataService {
 
   getData(): Observable<any> {
     console.log(environment.srv_port);
-    return this.http.get(`http://backend:${environment.srv_port}/getData`);
+    return this.http.get(`http://localhost:${environment.srv_port}/getData`);
   }
 }

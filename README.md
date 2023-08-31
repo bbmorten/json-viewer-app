@@ -14,17 +14,29 @@ ENV variables needed to have a working frontend and backend
 
 ## Test drive
 
-- Create a .env file under ./download-app and add two environment variables
+- Create a .env file under main directory and add two environment variables
 
 ```console
 CURL_URL="http://iptv.link:8080/get.php?username=XXX&password=YYY&type=m3u_plus&output=mpegts"
 SRV_PORT="4201"
 ```
 
+
+- Create a file under json-viewer-app/.env
+
+
+```console
+NG_APP_ENV = "IPTV Dashboard"
+NG_SVC_PORT="4301"
+NG_SRV_PORT="80"
+```
+
+
 - Before running `docker compose up -d` execute the following command or set the environment variable
 
 ```console
 export SRV_PORT=4201
+docker compose up -d
 ```
 
 - Allow sometime (20-50 sn) so that download-app to get the data and open your browser and connect to http://localhost:4200. You should see a screen like the one below

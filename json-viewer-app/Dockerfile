@@ -8,7 +8,7 @@ RUN npm run build --configuration=prod
 
 # Stage 2: Serve the Angular application from Nginx
 FROM nginx:latest
-COPY  ./dist/json-viewer-app /usr/share/nginx/html
+COPY  --from=build /app/dist/json-viewer-app /usr/share/nginx/html
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the .env file
